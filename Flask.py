@@ -7,24 +7,24 @@ def paginaInicio():
 
 @app.route('/registro.html', methods = ["POST"])
 def registrar():
-    if request.method == "POST":
-        try:
-            nombres = request.form["nombre"]
-            correo = request.form["correo"]
-            key = request.form["pass"]
-            keyConfirm = request.form["repass"]
-            print("Nombre:", nombres,"\nCorreo: ", correo, "\nKey: ", key)
-            return render_template('index.html')
-        except:
-            print("Error recuperando datos")
-            return render_template('registro.html')
-
-def paginaLogin():
-    return render_template('/registro.html')
+    if request.method == "GET":
+        return render_template('registro.html')
 
 @app.route('/acerca.html')
-
 def paginaAcerca():
     return render_template('acerca.html')
 
+
+#Metodo para el registro de un usuario
+# if request.method == "POST":
+#     try:
+#         nombres = request.form["nombre"]
+#         correo = request.form["correo"]
+#         key = request.form["pass"]
+#         keyConfirm = request.form["repass"]
+#         print("Nombre:", nombres,"\nCorreo: ", correo, "\nKey: ", key)
+#         return render_template('index.html')
+#     except:
+#         print("Error recuperando datos")
+#         return render_template('registro.html')
 

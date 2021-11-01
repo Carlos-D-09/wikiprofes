@@ -14,21 +14,58 @@
 </head>
 <body>
     <header>
+        <div class = "textos-header">
+            <h1> Wiki profes 2.0 </h1>
+        </div>
         <nav>
             <p>
                 <img src= "{{url_for('static',filename = '/img/login.png')}}" type = "image/x-icon" align = "right"> 
                 <a href="registro.html"> Iniciar sesion/Registrarse </a>
             </p>
             <p>
+                
+                <img src= "{{url_for('static',filename = '/img/acerca_de.png')}}" type = "image/x-icon" align = "right"> 
                 <a href="acerca.html"> Acerca de</a>
             </p>
         </nav>
-        <div class = "textos-header">
-            <h1> Wiki profes </h1>
-        </div>
     </header>
-    <main>
-        
-    </main>    
+    <!-- Contenedor flex box -->
+    <div class = "flex-principal">
+        <div class= "filtro-busqueda" style="order: 1; flex-grow: 1">
+            <p> Filtros de busqueda</p>
+            <form name = "busqueda-request" class = action = "" method = "post">
+                <input type = "text" class = "barra-busqueda" placeholder= "Introduce Nombre">
+                <input type = "image" class = "boton-enviar" src ="{{url_for('static',filename = '/img/busqueda.png')}}" align = "left">
+            </form>    
+            <a href = "#" > .Mejores calificados</a><br>
+            <a href = "#" > .Oden A-Z</a><br>
+            <a href = "#" > .Código de la materia</a><br>
+        </div>
+        <div class="informacion-Profesor" style="text-align:center; width: 70%; height: 70%; overflow: scroll; order: 2; flex-grow: 2;">
+            <p>Realiza una busqueda o consulta una muestra de profesores</p>
+            <br>  <br/> 
+        </div>
+    </div>
+    
+    <div class = "informacion-complementaria">
+        <div class = "contacto">
+            <h1> Contacto</h1> <br>
+            <a href = "#" > Discord:  </a><br><br>
+            <a href = "#" > Noticias </a><br><br>
+            <a href = "#" > Lista de actualizaciones </a><br>
+        </div>
+        <div class = "preguntas">
+            <h1> Preguntas y dudas frecuentes</h1> <br>
+            <a href = "#" > ¿Cómo evalúo a un profesor?  </a><br><br>
+            <a href = "#" > ¿Cómo registro a un profesor? </a><br><br>
+            <a href = "#" > Soy estudiante, ¿cómo me registro? </a><br><br>
+            <a href = "#" > Soy profesor, ¿cómo me registro? </a><br>
+        </div>
+        <div class = "caso_de_uso">
+            <h1> Por qué usar Wikiprofes 2.0</h1> <br>
+            <a href = "#" >  </a><br><br>
+            <a href = "#" > Informes de analistas </a><br><br>
+            <a href = "#" > Responsabilidad del equipo </a><br>
+    </div>
 </body>
 </html>

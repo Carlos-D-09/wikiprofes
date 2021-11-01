@@ -10,17 +10,17 @@ body{
 }
 
 header{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100px;
-    background:rgba(64, 64, 224, 0.5); 
+    background:rgba(115, 115, 233, 0.5); /*rgba(64, 64, 224, 0.5)*/
     background-attachment:  fixed;
 
 }
 
 .textos-header{
-    padding: 30px 50px 0 0;
-    height: 50px;
-    width:  100%;
+    padding: 30px 50px;
     justify-content: left;
     text-align: left;
 }
@@ -31,9 +31,10 @@ header{
 }
 
 nav{
-    float: right;
-    text-align:  right;
-    padding: 30px 50px 0 0;
+    display: flex;
+    justify-content: right;
+    border: transparent 5px ;
+    align-items: center;
 }
 
 nav > p > a{
@@ -42,8 +43,101 @@ nav > p > a{
     text-decoration: none;
     font-size: 16px;
     margin-right: 2px;
+    margin-left: 6px;
 }
 
 nav > p > a:hover{
     text-decoration: underline;
+}
+
+.flex-principal{
+    display:flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 1080px;
+    padding: 20px 20px;
+    background: #2a6388; 
+}
+
+.filtro-busqueda{
+    display: flex;
+    flex-direction: column;
+    background: #2a6388;
+    width: 200px;
+    height: 275px;
+    border:4px solid #1c435e;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 1px #1c435e;
+}
+
+.filtro-busqueda p{
+    height: 40px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border:5px solid #2a6388;
+}
+
+.barra-busqueda{
+    align-items: center;
+    border-radius: 5px;
+    background-color: #2a6388;
+    color:blanchedalmond;
+    font-weight: 16px;
+    justify-content: center;
+    height: 30px;
+}
+
+.barra-busqueda::placeholder{ color:blanchedalmond}
+
+.filtro-busqueda a{
+    color: blanchedalmond; 
+    text-decoration: none;
+    border:5px solid #2a6388;
+}
+
+.filtro-busqueda a:hover{
+    text-decoration: underline;
+}
+
+.informacion-Profesor{
+    /*background-image: linear-gradient(to bottom right, #83918a, #4cac6e);*/
+    border: 3px solid #1c435e;
+}
+
+.informacion-Profesor p{
+    color: lightblue;
+}
+
+.informacion-complementaria{
+    display:flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 320px;
+    padding: 20px 20px;
+    background: rgba(115, 115, 233, 0.5); 
+}
+
+.contacto{
+    width: 200px;
+}
+
+.contacto h1{
+    color: blanchedalmond;
+    font-size: 25px;
+    font-style: normal;
+}
+
+/* .contacto a{
+    color: ;
+} */
+
+.preguntas{
+    width: 400px;
+}
+
+.preguntas h1{
+    color: blanchedalmond;
+    font-size: 25px;
+    font-style: normal;
 }
