@@ -3,7 +3,7 @@ from main import app
 
 @app.route('/')
 def paginaInicio():
-    return render_template('/index.html')
+    return render_template('/index.html')           #Redireccionar a la vista principal del proyecto
 
 @app.route('/registro.html', methods = ["GET", "POST"])
 def registrar():
@@ -12,7 +12,7 @@ def registrar():
     if request.method == "POST":
         try:
             nombres = request.form["nombre"]
-            correo = request.form["correo"]
+            correo = request.form["correo"]                           #Redireccionar al registro
             key = request.form["pass"]
             keyConfirm = request.form["repass"]
             print("Nombre:", nombres,"\nCorreo: ", correo, "\nKey: ", key)
@@ -23,4 +23,16 @@ def registrar():
 
 @app.route('/acerca.html')
 def paginaAcerca():
-    return render_template('acerca.html')
+    return render_template('acerca.html')               #Redireccionar a "Acerca de"
+
+@app.route('/contacto.html')
+def paginaContacto():
+    return render_template('contacto.html')             #Redireccionar a "Contacto"
+
+@app.route('/preguntas.html')
+def paginaPreguntas():
+    return render_template('preguntas.html')            #Redireccionar a "Preguntas"
+
+@app.route('/infowiki.html')
+def paginaInfo():
+    return render_template('infowiki.html')             #Redireccionar a "Info wiki"
